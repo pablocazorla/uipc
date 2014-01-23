@@ -1,0 +1,190 @@
+/*
+Theme Name: UI PC
+Theme URL: http://www.pcazorla.com
+Description: Theme for pcazorla.com
+Author: Pablo Cazorla
+Version: 1.x
+Tags: pablo, cazorla, ilustración, webdesign
+*/
+
+/* NORMALIZE */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:0.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:0.35em 0.625em 0.75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}*:focus {outline: 0}
+/*RESET*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul,menu{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* Clearfix */
+.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{zoom:1}
+.clear{clear:both}
+
+/* BASICS **********************************************************************************************************/
+
+
+body, input, textarea {
+	font: 20px/1.4em 'Open Sans', Arial, Helvetica, sans-serif;
+	color:#444;
+}
+
+h1,h2,h3,h4,h5,h6,
+.title,
+header.main{
+	font-family:'Quicksand';
+	font-weight:700;
+	letter-spacing: -0.05em;	
+}
+
+h1{font-size: 70px;line-height: 80px; padding: 25px 0 10px;margin-bottom:30px;color:#111;}
+
+h2{font-size: 50px;line-height: 60px; padding: 30px 0 15px}
+h2,h2 a{color:#888}
+
+
+
+
+p{
+	margin-bottom:20px;
+}
+
+
+
+a{text-decoration: none;color: #0096FF}
+a:hover{text-decoration: underline}
+
+/* COMMON *************************************************/
+.wrap{max-width:1200px;padding-left:10px;padding-right:10px;margin-left:auto;margin-right:auto}
+
+/* HEADER *************************************************/
+header.main{
+	position:absolute;top:30px;left:0;right:0;z-index: 11001;background-color:transparent;
+}
+header.main menu{
+	font-size:18px;line-height: 50px;height: 50px;font-weight:bold
+}
+header.main menu li{
+	text-align: center;
+	display:block;
+	float:left;
+	width:33.33%;
+}
+header.main menu a{
+	color:#888;display:block;margin:0 60px;border-radius:8px;background-color: transparent;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
+}
+header.main menu a:hover{
+	color:#000;background-color: rgba(255,255,255,.8);
+}
+header.main menu li.current-menu-item a,
+header.main menu li.current-menu-item a:hover{color:rgba(128,128,128,.4);background-color: transparent;cursor:default;text-decoration:none;}
+header.main.floating.showing{
+	top:0;	
+}
+header.main,header.main.floating.showing{
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
+}
+header.main.floating{
+	position:fixed;top:-56px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+	
+	background-color:#FFF;
+	box-shadow:0 2px 3px rgba(0,0,0,.1);
+}
+
+/* PRESENTATION *****************************************/
+#presentation{
+	background:#EEE;min-height:1000px;
+	position:relative;
+}
+#presentation-title{
+	text-align: center;
+	position:absolute;z-index:11;
+	left:0;right:0;
+	top:200px;
+}
+#presentation-container{
+	position:absolute;z-index:10;
+	left:0;right:0;
+	top:300px;
+}
+#presentation-content{
+	background:#CCC;height: 450px
+}
+#presentation-container.fixed{
+	position: fixed;
+	top:50%;margin-top:-225px;
+}
+#presentation-container.bottom{
+	top:auto;bottom:20px;
+}
+
+
+/* ARTICLES **************************************************/
+#lab,#about-me{
+	padding-top:130px
+}
+
+
+/* POST**************************************************/
+.post{
+	border-top:solid 1px #EEE;
+	padding-bottom:30px;
+}
+.post .header-post{
+	padding-bottom:20px;
+}
+.post .header-post .category{
+	font-size: 15px;color:#777;
+}
+
+/* POST IN LIST **************************************************/
+.post.post-in-list{}
+
+/* POST IN PAGE **************************************************/
+.post.post-in-page h1{
+	font-size: 50px;line-height: 60px; padding: 30px 0 15px;margin-bottom:0;
+}
+.post.post-in-page h2{
+	font-size: 30px;line-height: 40px; padding: 30px 0 15px;margin-bottom:0;
+}
+
+
+
+/* ABOUT ME ***************************************/
+#about-me{
+	background: #222;color:#EEE;
+	min-height:1600px;
+}
+#about-me h1,
+#about-me h2,
+#about-me h3,
+#about-me h4,
+#about-me h5,
+#about-me h6,
+#about-me .title{
+	color:#FFF;
+}
+
+/* FOOTER ********************************************************/
+footer.main{
+	text-align: center;line-height: 60px;background: #EEE;
+	padding:0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
